@@ -1,0 +1,83 @@
+2024-06-24 18:08:06,499 p=3444395 u=upszot n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 18:08:06,598 p=3444395 u=upszot n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:06,609 p=3444395 u=upszot n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,746 p=3444395 u=upszot n=ansible | ok: [localhost]
+2024-06-24 18:08:07,775 p=3444395 u=upszot n=ansible | TASK [include_role : 2do_parcial] ***********************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,805 p=3444395 u=upszot n=ansible | TASK [2do_parcial : debug] ******************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,817 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 18:08:07,836 p=3444395 u=upszot n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,851 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-06-21 04:33:51,724 p=5889 u=SantiagoGodoy n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2026-06-21 04:33:51,871 p=5889 u=SantiagoGodoy n=ansible | PLAY [all] *************************************************************************************************************************************************************************************
+2026-06-21 04:33:51,871 p=5889 u=SantiagoGodoy n=ansible | skipping: no hosts matched
+2026-06-21 04:33:51,871 p=5889 u=SantiagoGodoy n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************
+2026-06-21 04:35:18,612 p=5891 u=SantiagoGodoy n=ansible | PLAY [all] *************************************************************************************************************************************************************************************
+2026-06-21 04:35:18,622 p=5891 u=SantiagoGodoy n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************
+2026-06-21 04:35:18,724 p=5891 u=SantiagoGodoy n=ansible | fatal: [localhost]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added 'localhost' (ED25519) to the list of known hosts.\r\nSantiagoGodoy@localhost: Permission denied (publickey,password).", "unreachable": true}
+2026-06-21 04:35:18,725 p=5891 u=SantiagoGodoy n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************
+2026-06-21 04:35:18,725 p=5891 u=SantiagoGodoy n=ansible | localhost                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-06-21 04:36:02,004 p=5898 u=SantiagoGodoy n=ansible | PLAY [all] *************************************************************************************************************************************************************************************
+2026-06-21 04:36:02,010 p=5898 u=SantiagoGodoy n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************
+2026-06-21 04:36:02,953 p=5898 u=SantiagoGodoy n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python interpreter could change the meaning
+of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-21 04:36:02,953 p=5898 u=SantiagoGodoy n=ansible | ok: [localhost]
+2026-06-21 04:36:02,959 p=5898 u=SantiagoGodoy n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************************************
+2026-06-21 04:36:02,976 p=5898 u=SantiagoGodoy n=ansible | included: 2do_parcial for localhost
+2026-06-21 04:36:02,983 p=5898 u=SantiagoGodoy n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************************************
+2026-06-21 04:36:02,993 p=5898 u=SantiagoGodoy n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2026-06-21 04:36:03,004 p=5898 u=SantiagoGodoy n=ansible | TASK [Crear archivo alumno con template] *******************************************************************************************************************************************************
+2026-06-21 04:36:03,033 p=5898 u=SantiagoGodoy n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ansible.errors.AnsibleUndefinedVariable: 'nombre' is undefined
+2026-06-21 04:36:03,033 p=5898 u=SantiagoGodoy n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'nombre' is undefined"}
+2026-06-21 04:36:03,034 p=5898 u=SantiagoGodoy n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************
+2026-06-21 04:36:03,034 p=5898 u=SantiagoGodoy n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-06-21 04:38:53,605 p=6012 u=SantiagoGodoy n=ansible | PLAY [all] *************************************************************************************************************************************************************************************
+2026-06-21 04:38:53,612 p=6012 u=SantiagoGodoy n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************
+2026-06-21 04:38:54,503 p=6012 u=SantiagoGodoy n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python interpreter could change the meaning
+of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-21 04:38:54,503 p=6012 u=SantiagoGodoy n=ansible | ok: [localhost]
+2026-06-21 04:38:54,510 p=6012 u=SantiagoGodoy n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************************************
+2026-06-21 04:38:54,529 p=6012 u=SantiagoGodoy n=ansible | included: 2do_parcial for localhost
+2026-06-21 04:38:54,536 p=6012 u=SantiagoGodoy n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************************************
+2026-06-21 04:38:54,547 p=6012 u=SantiagoGodoy n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2026-06-21 04:38:54,559 p=6012 u=SantiagoGodoy n=ansible | TASK [Crear archivo alumno con template] *******************************************************************************************************************************************************
+2026-06-21 04:38:54,989 p=6012 u=SantiagoGodoy n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "checksum": "117371c3560c0d898dd3d5b5e9d41a84a9b47cef", "msg": "Destination /tmp/2do_parcial/alumno not writable"}
+2026-06-21 04:38:54,990 p=6012 u=SantiagoGodoy n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************
+2026-06-21 04:38:54,990 p=6012 u=SantiagoGodoy n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-06-21 04:40:49,707 p=6147 u=SantiagoGodoy n=ansible | PLAY [all] *************************************************************************************************************************************************************************************
+2026-06-21 04:40:49,714 p=6147 u=SantiagoGodoy n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************
+2026-06-21 04:40:50,722 p=6147 u=SantiagoGodoy n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python interpreter could change the meaning
+of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-21 04:40:50,722 p=6147 u=SantiagoGodoy n=ansible | ok: [localhost]
+2026-06-21 04:40:50,729 p=6147 u=SantiagoGodoy n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************************************
+2026-06-21 04:40:50,746 p=6147 u=SantiagoGodoy n=ansible | included: 2do_parcial for localhost
+2026-06-21 04:40:50,754 p=6147 u=SantiagoGodoy n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************************************
+2026-06-21 04:40:50,764 p=6147 u=SantiagoGodoy n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2026-06-21 04:40:50,776 p=6147 u=SantiagoGodoy n=ansible | TASK [Crear archivo alumno con template] *******************************************************************************************************************************************************
+2026-06-21 04:40:51,231 p=6147 u=SantiagoGodoy n=ansible | changed: [localhost]
+2026-06-21 04:40:51,237 p=6147 u=SantiagoGodoy n=ansible | TASK [Crear archivo equipo con template] *******************************************************************************************************************************************************
+2026-06-21 04:40:51,518 p=6147 u=SantiagoGodoy n=ansible | changed: [localhost]
+2026-06-21 04:40:51,525 p=6147 u=SantiagoGodoy n=ansible | TASK [Configurar sudoers sin password] *********************************************************************************************************************************************************
+2026-06-21 04:40:51,805 p=6147 u=SantiagoGodoy n=ansible | changed: [localhost]
+2026-06-21 04:40:51,811 p=6147 u=SantiagoGodoy n=ansible | TASK [Otra tarea] ******************************************************************************************************************************************************************************
+2026-06-21 04:40:51,821 p=6147 u=SantiagoGodoy n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2026-06-21 04:40:51,822 p=6147 u=SantiagoGodoy n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************
+2026-06-21 04:40:51,822 p=6147 u=SantiagoGodoy n=ansible | localhost                  : ok=7    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
